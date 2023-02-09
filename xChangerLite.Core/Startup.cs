@@ -6,7 +6,10 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.OpenApi.Models;
+using xChangerLite.Core.Brokers.Storages;
 
 namespace xChangerLite.Core
 {
@@ -19,6 +22,25 @@ namespace xChangerLite.Core
 
         public IConfiguration Configuration { get; }
 
+        public void ConfigureServices(IServiceCollection services)
+        {
+
+            services.AddControllers();
+            services.AddDbContext<StorageBroker>();
+            AddBrokers(services);
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc(
+                    name: "v1",
+                    info: new OpenApiInfo
+                    {
+                        Title = "xChangerLite.Core",
+                        Version = "v1"
+                    });
+            });
+        }
+
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -29,7 +51,7 @@ namespace xChangerLite.Core
                 app.UseSwaggerUI(config =>
                     config.SwaggerEndpoint(
                         url: "/swagger/v1/swagger.json",
-                        name: "xChanger.Core.POC v1"));
+                        name: "xChangerLite.Core v1"));
             }
 
             app.UseHttpsRedirection();
@@ -38,6 +60,11 @@ namespace xChangerLite.Core
 
             app.UseEndpoints(endpoints =>
                 endpoints.MapControllers());
+        }
+
+        private static void AddBrokers(IServiceCollection services)
+        {
+            services.AddTransient<IStorageBroker, StorageBroker>();
         }
     }
 }
