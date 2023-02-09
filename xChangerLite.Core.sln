@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xChangerLite.Core", "xChangerLite.Core\xChangerLite.Core.csproj", "{5271CDEC-7DB7-4B36-AF4B-F7AB9484F8A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "xChangerLite.Core", "xChangerLite.Core\xChangerLite.Core.csproj", "{5271CDEC-7DB7-4B36-AF4B-F7AB9484F8A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xChangerLite.Core.Tests.Unit", "xChangerLite.Core.Tests.Unit\xChangerLite.Core.Tests.Unit.csproj", "{E57D2A74-1284-4038-A9E7-4E096619C167}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{5271CDEC-7DB7-4B36-AF4B-F7AB9484F8A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5271CDEC-7DB7-4B36-AF4B-F7AB9484F8A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5271CDEC-7DB7-4B36-AF4B-F7AB9484F8A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E57D2A74-1284-4038-A9E7-4E096619C167}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E57D2A74-1284-4038-A9E7-4E096619C167}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E57D2A74-1284-4038-A9E7-4E096619C167}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E57D2A74-1284-4038-A9E7-4E096619C167}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
