@@ -1,4 +1,9 @@
-﻿namespace xChangerLite.Core.Models.Foundations.Pets
+﻿//====================================================
+// Copyright (c) Coalition Of Good-Hearted Engineers
+// EVERY LITTLE HELPS
+//====================================================
+
+namespace xChangerLite.Core.Models.Foundations.Pets
 {
     public enum PetType
     {
