@@ -7,7 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Brokers\Sheets\SheetBroker.ExternalPerson.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Brokers\Sheets\SheetBroker.ExternalPerson.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="EFxceptions" Version="0.4.5" />
+    <PackageReference Include="EPPlus" Version="6.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.2">
       <PrivateAssets>all</PrivateAssets>
