@@ -1,6 +1,10 @@
-﻿namespace xChangerLite.Core.Brokers.Queues
+﻿//====================================================
+// Copyright (c) Coalition Of Good-Hearted Engineers
+// EVERY LITTLE HELPS
+//====================================================
+
+namespace xChangerLite.Core.Brokers.Queues
 {
-    public interface IQueueBroker
-    {
-    }
+    public partial interface IQueueBroker
+    {}
 }
